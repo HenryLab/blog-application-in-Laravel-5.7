@@ -32,4 +32,25 @@ class HomeController extends Controller
         $users = User::orderBy('id', 'DESC')->get();
         return view('users', ['users' => $users]);
     }
+
+
+    /**
+     * A function to show a list of all blog posts
+     */
+
+    public function PostList()
+    {
+        return view('post_list');
+    }
+
+
+    /**
+     * A function to show a form to create post
+     */
+
+    public function createPost()
+    {
+        return view('post_create');
+    }
+
 }

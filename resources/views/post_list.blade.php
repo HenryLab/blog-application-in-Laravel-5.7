@@ -12,6 +12,32 @@
                     </h1>
                     <a href="{{ route('create_post') }}" class="btn btn-primary float-right">Add Post</a>
                 </div>
+
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                <div class="row">
+                    @foreach($posts as $post)
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem;">
+                                {{--<img class="card-img-top" src="..." alt="Blog Post Image">--}}
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $post->title }} by <small><i>{{ $post->writer->name }}</i></small></h5>
+                                    <p class="card-text">
+                                        {{ $post->body }}
+                                    </p>
+                                    <a href="#" class="card-link btn btn-primary">Edit</a>
+                                    <a href="#" class="card-link btn btn-danger" >delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+
             </main>
         </div>
     </div>

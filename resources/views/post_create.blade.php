@@ -11,7 +11,8 @@
                 </div>
 
 
-                    <form action="" method="post">
+                    <form action="{{ route('store_new_post') }}" method="post">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter blog title" name="title" required>

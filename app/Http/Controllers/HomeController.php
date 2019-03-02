@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -40,7 +42,9 @@ class HomeController extends Controller
 
     public function PostList()
     {
-        return view('post_list');
+        $posts = Blog::with('writer')->get();
+//        dd($posts);
+        return view('post_list', ['posts' => $posts]);
     }
 
 
@@ -51,6 +55,27 @@ class HomeController extends Controller
     public function createPost()
     {
         return view('post_create');
+    }
+
+
+    /**
+     * A function to store our post
+     */
+
+    public function storePost(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+            ]
+        );
+
+        $article = new Blog();
+        $article->title = $request->get('title');
+        $article->body = $request->get('body');
+        $article->author = Auth::id();
+        $article->save();
+        return redirect()->route('all_posts')->with('status', 'New article has been successfully created!');
     }
 
 }

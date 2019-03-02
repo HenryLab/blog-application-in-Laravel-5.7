@@ -9,3 +9,4 @@ Hey everyone, my name is Henry and welcome to building a blog application tutori
 * [Lesson 3](https://blog.hlab.tech/laravel5-7-blog-admin-setup-using-bootstrap-4/) - Using Bootstrap 4 on our Blog Admin Dashboard in Laravel 5.7 and Php 7.2
 * [Lesson 4](https://blog.hlab.tech/part-iv-creating-blog-migration-and-showing-registered-users-in-our-admin-portal-using-laravel-5-7-and-php-7-2/) - Creating Blog Migration and Showing Registered Users in Our Admin Portal Using Laravel 5.7 and Php 7.2
 * [Lesson 5](https://blog.hlab.tech/part-v-running-our-blog-migration-and-creating-blog-post-in-laravel-5-7-and-php-7-2/) - Running Our Blog Migration and Creating Blog Post in Laravel 5.7 and Php 7.2
+* [Lesson 6](https://blog.hlab.tech/part-vi-how-to-store-and-retrieve-a-blog-post-in-laravel-5-7-and-php-7-2/) - How to store and Retrieve a Blog Post in Laravel 5.7 and Php 7.2

@@ -65,15 +65,22 @@ class HomeController extends Controller
     public function storePost(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'body' => 'required',
+                'title' => 'required',
+                'body' => 'required',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]
         );
+
+        $image = $request->file('image');
+        $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $input['imagename']);
 
         $article = new Blog();
         $article->title = $request->get('title');
         $article->body = $request->get('body');
         $article->author = Auth::id();
+        $article->image = $input['imagename'];
         $article->save();
         return redirect()->route('all_posts')->with('status', 'New article has been successfully created!');
     }

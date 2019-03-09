@@ -85,4 +85,28 @@ class HomeController extends Controller
         return redirect()->route('all_posts')->with('status', 'New article has been successfully created!');
     }
 
+    public function editPost($post_id)
+    {
+        $post = Blog::find($post_id);
+        return view('edit_form', ['post' => $post]);
+    }
+
+    public function updatePost(Request $request, $post_id)
+    {
+        $post = Blog::find($post_id);
+        $post->title = $request->get('title');
+        $post->body = $request->get('body');
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $input['imagename']);
+            $post->image = $input['imagename'];
+        }
+        $post->save();
+        return redirect()->route('all_posts')->with('status', 'Post has been successfully updated!');
+
+    }
+
 }

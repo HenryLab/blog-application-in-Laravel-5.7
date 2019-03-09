@@ -31,7 +31,7 @@
                                     <p class="card-text">
                                         {{ $post->body }}
                                     </p>
-                                    <a href="#" class="card-link btn btn-primary">Edit</a>
+                                    <a href="{{ route('edit_post_form', ['post_id' => $post->id]) }}" class="card-link btn btn-primary">Edit</a>
                                     <a href="#" class="card-link btn btn-danger" >delete</a>
                                 </div>
                             </div>

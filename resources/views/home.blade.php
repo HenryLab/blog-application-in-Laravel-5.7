@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="col-6">
                                     <br>
-                                    <h3 class="card card-block border-0">70%</h3>
+                                    <h3 class="card card-block border-0">{{ $post_count }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -42,15 +42,47 @@
                                 </div>
                                 <div class="col-6">
                                     <br>
-                                    <h3 class="card card-block border-0">70%</h3>
+                                    <h3 class="card card-block border-0">{{ $author_count }}</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card bg-success" >
+                            <div class="card-header text-white">
+                                Latest Post
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                @foreach($new_posts as $post)
+                                    <li class="list-group-item">{{ $post->title }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md">
+                        <div class="card bg-success" >
+                            <div class="card-header text-white">
+                                New Authors
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                @foreach($new_authors as $author)
+                                    <li class="list-group-item">{{ $author->name }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+
+                    </div>
 
                 </div>
+
             </main>
         </div>
     </div>

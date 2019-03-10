@@ -26,7 +26,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $number_of_posts = Blog::count();
+        $number_of_authors = User::count();
+        $new_posts = Blog::orderBy('id', 'DESC')->take(5)->get();
+        $new_authors = User::orderBy('id', 'DESC')->take(5)->get();
+
+        $data = [
+            'post_count' => $number_of_posts,
+            'author_count' => $number_of_authors,
+            'new_posts' => $new_posts,
+            'new_authors' => $new_authors,
+        ];
+
+        return view('home', $data);
     }
 
     public function getRegisteredUsers()

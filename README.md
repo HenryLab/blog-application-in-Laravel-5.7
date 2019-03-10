@@ -12,3 +12,4 @@ Hey everyone, my name is Henry and welcome to building a blog application tutori
 * [Lesson 6](https://blog.hlab.tech/part-vi-how-to-store-and-retrieve-a-blog-post-in-laravel-5-7-and-php-7-2/) - How to store and Retrieve a Blog Post in Laravel 5.7 and Php 7.2
 * [Lesson 7](https://blog.hlab.tech/part-vii-how-to-upload-image-in-our-blog-application-using-laravel-5-7-and-php-7-2/) - How to Upload Image in Our Blog Application Using Laravel 5.7 and Php 7.2
 * [Lesson 8](https://blog.hlab.tech/part-viii-how-to-edit-and-update-our-post-in-laravel-5-7-and-php-7-2/) - How to Edit and Update Our Post in Laravel 5.7 and Php 7.2
+* [Lesson 9](https://blog.hlab.tech/part-ix-how-to-delete-a-post-and-final-admin-dashboard-touch-in-laravel-5-7-and-php-7-2/) - How to Delete a Post and Final Admin Dashboard Touch in Laravel 5.7 and Php 7.2

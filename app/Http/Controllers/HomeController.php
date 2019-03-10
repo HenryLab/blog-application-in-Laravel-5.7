@@ -109,4 +109,12 @@ class HomeController extends Controller
 
     }
 
+
+    public function deletePost($post_id)
+    {
+        $post = Blog::find($post_id);
+        $post->delete();
+        return redirect()->route('all_posts')->with('status', 'Post has been successfully delete!');
+    }
+
 }

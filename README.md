@@ -15,5 +15,5 @@ Hey everyone, my name is Henry and welcome to building a blog application tutori
 * [Lesson 9](https://blog.hlab.tech/part-ix-how-to-delete-a-post-and-final-admin-dashboard-touch-in-laravel-5-7-and-php-7-2/) - How to Delete a Post and Final Admin Dashboard Touch in Laravel 5.7 and Php 7.2
 * [Lesson 10](https://blog.hlab.tech/part-x-displaying-our-posts-to-site-visitors-in-laravel-5-7-and-php-7-2/) - Displaying Our Posts to Site Visitors in Laravel 5.7 and Php 7.2
 
-### Authors
+### Author
 * **[Henry Mbugua](https://twitter.com/henrymbuguak)**
